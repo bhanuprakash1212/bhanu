@@ -1,0 +1,184 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    height: 100vh;
+    width: 100%;
+    overflow: auto;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    @apply dark:bg-slate-800
+
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #ababab; 
+  }
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+  
+.active{
+     @apply bg-[#01837f] text-white
+}
+@layer components {
+
+    /* This is Navbar code */
+
+    nav{
+        @apply h-16 flex justify-between items-center border-2 border-slate-200 dark:border-slate-700 dark:text-white sticky top-0 bg-white dark:bg-slate-800
+        max-sm:h-20
+    }
+    .navbar{
+        @apply flex space-x-12 pr-8 max-sm:flex max-sm:w-full  max-sm:space-x-4
+        max-sm:m-5 max-sm:text-[13px]
+    }
+
+    .logo{
+        @apply  p-1 px-2 rounded-full text-3xl bg-white ml-3 dark:bg-slate-800 max-sm:hidden
+    }
+    .navbar a{
+        @apply px-2 py-1 rounded-sm font-bold grid items-center
+    }
+
+    .switch{
+        @apply bg-white text-black rounded-full align-baseline p-1 max-sm:ml-8
+    }
+
+    /* This is Home page code*/
+
+    .matter{
+        @apply w-[39%] p-16 pl-20 dark:text-white max-sm:w-full
+        max-sm:p-10
+    }
+
+    .matter h1{
+        @apply font-bold text-2xl mb-7 mt-14 pb-6 leading-6
+    }
+    .matter h1 span{
+        @apply text-sm p-2 items-baseline bg-[#01837f] text-white rounded-sm
+        
+    }
+    .matter p{
+        @apply w-[50vw] text-justify max-sm:w-[100%]
+    }
+
+
+    /* About page styles */
+
+    .about-section{
+        @apply bg-slate-200 h-[750px] w-[90%] ml-[5%] mt-[3vh] rounded-md overflow-hidden flex justify-between
+        dark:bg-slate-700 max-sm:flex-col max-sm:overflow-auto
+    }
+    .data{
+        @apply w-80 h-full flex items-center flex-col bg-[#01837f]
+        max-sm:w-full max-sm:pb-4
+    }
+    .data img{
+        @apply h-36 w-36 rounded-full mt-8 border-[5px] border-[#ffff] bg-cover
+    }
+    .info{
+        @apply border-2 border-white p-6 flex flex-col space-y-6 mt-20 bg-white rounded-md w-72 dark:bg-slate-700 
+        dark:border-slate-700 max-sm:w-[90%]
+    }
+    .info ul{
+        @apply mt-4 mb-8
+    }
+    .info li{
+        @apply flex space-x-3 font-bold text-[#01837f] mb-8 dark:text-white
+    }
+
+    .ab{
+        @apply h-full w-[78%] dark:bg-slate-800 border-2 dark:border-slate-600  leading-7
+        max-sm:w-full
+    }
+    .tab{
+        @apply flex w-80 border-b-2 border-slate-300 mt-3 ml-3 
+    }
+    .tab ul{
+        @apply flex justify-between px-8 py-3 w-80
+    }
+    .tab ul li{
+        @apply  px-4 py-2 
+    }
+    .tab a{
+        @apply bg-slate-200 text-black border-t-2 px-3 pt-2 -z-30 dark:bg-slate-800 dark:text-white border-transparent
+    }
+    .tab .active{
+        @apply border-[#01837f]
+    }
+    
+    .about-para{
+        @apply w-[90%] p-8 text-justify ml-6 text-slate-600 dark:bg-slate-700 dark:text-white mt-5
+    }
+
+
+
+    .skill-card{
+        @apply w-[430px] flex p-5 items-center border-2 border-slate-300 bg-white rounded-md shadow-sm
+        dark:bg-slate-600 dark:border-slate-600
+    }
+    .skill-card:first-child{
+        @apply mt-8
+    }
+    .skill-card:nth-child(2){
+        @apply mt-8
+    }
+
+
+    .project-tabs{
+        @apply  bg-slate-200 p-4 w-[91%] ml-[5%] mt-6 dark:bg-slate-700 dark:text-white
+    }
+    .project-tabs ul{
+        @apply flex space-x-10 mx-5
+    }
+    .project-tabs ul .active{
+        @apply px-3 py-1
+    }
+
+    .fbox{
+        @apply flex flex-wrap gap-9 border-2 p-8 overflow-auto dark:bg-slate-800 dark:border-slate-600
+        
+    }
+    .pcard{
+        @apply h-[340px] w-[300px] bg-slate-200 p-6 dark:bg-slate-700
+        max-sm:w-[340px]
+    }
+    .pcard h1{
+        @apply mt-5 dark:text-white
+    }
+    .fbox .active{
+        @apply bg-[#01837f] text-white px-4 py-2 rounded-sm
+    }
+
+
+    .card-exp{
+        @apply flex bg-slate-50 p-9 py-20 justify-between px-32 dark:bg-slate-600 max-sm:flex-col
+        max-sm:px-8
+    }
+    .card-exp img{
+      @apply h-40 shadow-lg
+    }
+    .card-exp h1{
+        @apply font-bold text-slate-700 text-lg mb-6 dark:text-white
+    }
+    .card-exp h1 span{
+        @apply font-semibold text-[15px] bg-slate-300 px-2 py-[2px] rounded-md text-slate-700 ml-3
+    }
+    .card-exp button{
+        @apply bg-[#01837f] text-white px-4 py-[4px] rounded-sm mt-9 max-sm:mb-7
+    }
+    .card-exp p{
+        @apply  text-slate-600 dark:text-white
+    }
+}
